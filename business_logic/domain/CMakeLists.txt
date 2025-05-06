@@ -1,0 +1,29 @@
+add_library(domain
+        EventMaterial/Event.h
+        ClubConfig.h
+        ParseData.h
+        EventMaterial/BuildChainHandlers/EventHandler.h
+        EventMaterial/BuildChainHandlers/EventHandler.h
+        EventMaterial/BuildChainHandlers/ClientArrivedHandler.h
+        EventMaterial/ClientArrived.h
+        Table.h
+        EventTime.h
+        EventMaterial/ClientSatDown.h
+        EventMaterial/ClientWaiting.h
+        EventTime.cpp
+        EventMaterial/BuildChainHandlers/ClientSatDownHandler.h
+        EventMaterial/BuildChainHandlers/ClientWaitingHandler.h
+        EventMaterial/ClientLeft.h
+        EventMaterial/BuildChainHandlers/ClientLeftEventHandler.h
+        EventMaterial/ClientFinal.h
+        EventMaterial/ErrorEvent.h
+        EventMaterial/ClientSatByQueue.h
+        ClubResult.h
+        TableInfo.h
+)
+
+target_include_directories(domain PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        EventMaterial/
+        EventMaterial/BuildChainHandlers
+)
